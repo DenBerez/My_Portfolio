@@ -1,0 +1,12 @@
+html {
+  background-color: rgb(10, 20, 30);
+  color: whitesmoke;
+}
+
+#dial {
+  background-color: orange;
+}
+
+.MuiSpeedDial-fab {
+  background-color: orange;
+}
