@@ -12,6 +12,13 @@ html {
   height: 100vh;
 }
 
+#fab {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: orange;
+}
+
 #git:hover {
   background-color: orange;
   color: rgb(10, 20, 30);

@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import face from '../../dist/face.jpg';
 import Calendly from './calendly';
+import About from './about';
+import Paper from '@mui/material/Paper';
 
 export default function contact({ refProp }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,7 +47,9 @@ export default function contact({ refProp }) {
       alignItems="center"
       className="App"
     >
-      <Typography id="myName" variant="h4" sx={{ p: 5 }}>Dennis Berezin</Typography>
+      <Typography id="myName" variant="h4" sx={{ p: 5 }}>
+        Dennis Berezin
+      </Typography>
       <Popover
         id={id}
         open={open}
@@ -60,15 +64,15 @@ export default function contact({ refProp }) {
         }}
         onClose={handleClose}
       >
-      {anchorElID
-      &&
-        <Typography sx={{ p: 1 }}>
-          {anchorElID === 'phone'
-          && "(631)830-3327"}
-          {anchorElID === 'email'
-          && "dennis.m.berezin@gmail.com"}
-        </Typography>
-      }
+        {anchorElID
+        &&
+          <Typography sx={{ p: 1 }}>
+            {anchorElID === 'phone'
+            && "(631)830-3327"}
+            {anchorElID === 'email'
+            && "dennis.m.berezin@gmail.com"}
+          </Typography>
+        }
       </Popover>
 
 
@@ -122,7 +126,7 @@ export default function contact({ refProp }) {
           >
             <GitHubIcon />
           </IconButton>
-          </Tooltip>
+        </Tooltip>
       </Grid>
       <Calendly />
       <Button
@@ -135,6 +139,18 @@ export default function contact({ refProp }) {
           See my Work
         </Typography>
       </Button>
+      <Paper variant="elevation" elevation={3} sx={{ backgroundColor: "gray", color: "whitesmoke", marginTop: "20px" }}>
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ marginLeft: "-20px" }}
+        >
+          <Typography variant="h6" sx={{ marginTop: "20px", textShadow: "0 1px black" }}>About Me</Typography>
+          <About />
+        </Grid>
+      </Paper>
     </Grid>
   )
 }
