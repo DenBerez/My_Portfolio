@@ -1,12 +1,51 @@
 html {
   background-color: rgb(10, 20, 30);
   color: whitesmoke;
+  scroll-behavior: smooth;
 }
 
-#dial {
-  background-color: orange;
+#topSec {
+  height: 100vh;
 }
 
-.MuiSpeedDial-fab {
+#projSec {
+  height: 100vh;
+}
+
+#git:hover {
   background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#linked:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#email:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#phone:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#schedule:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#myName {
+  border-bottom: 2px solid orange;
+  padding-bottom: 15px;
+}
+
+#schedText {
+  color: rgb(10, 20, 30);
+}
+
+#schedule {
+  margin: 10px;
 }

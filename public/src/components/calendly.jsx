@@ -2,7 +2,6 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { PopupModal } from "react-calendly";
 
 export default function calendly() {
@@ -23,7 +22,16 @@ export default function calendly() {
   };
   return (
     <div id='popArea'>
-      <Button id='dial' variant="contained" onClick={() => {setOpenC(true)}}>Schedule Time w/ Me</Button>
+      <Button
+        id='schedule'
+        variant="contained"
+        sx={{ backgroundColor: "gold", color: "#756201" }}
+        onClick={() => {setOpenC(true)}}
+      >
+        <Typography id='schedText'>
+          Schedule Time w/ Me
+        </Typography>
+      </Button>
       <PopupModal
       url="https://calendly.com/denberez/30min"
       rootElement={document.getElementById("popArea")}
