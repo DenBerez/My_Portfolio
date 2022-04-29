@@ -15,6 +15,9 @@ import face from '../../dist/face.jpg';
 import Calendly from './calendly';
 import About from './about';
 import Paper from '@mui/material/Paper';
+import Link from '@mui/material/Link';
+import DBRes from '../../dist/DBRes.pdf';
+import { saveAs } from "file-saver";
 
 export default function contact({ refProp }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -36,6 +39,12 @@ export default function contact({ refProp }) {
       window.open("https://github.com/DenBerez");
     }
   }
+  const saveFile = () => {
+    saveAs(
+      DBRes,
+      "Dennis_Berezin_Resume.pdf"
+    );
+  };
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
@@ -75,6 +84,7 @@ export default function contact({ refProp }) {
         }
       </Popover>
 
+      {/* Face Row */}
 
       <Grid
         container
@@ -128,7 +138,25 @@ export default function contact({ refProp }) {
           </IconButton>
         </Tooltip>
       </Grid>
-      <Calendly />
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Calendly />
+        <Button
+        id='resLink'
+        variant="contained"
+        sx={{ backgroundColor: "gold", color: "#756201" }}
+        onClick={saveFile}
+        >
+        <Typography id='schedText'>
+          Download my Resume
+        </Typography>
+      </Button>
+      </Grid>
       <Button
         id='schedule'
         variant="contained"
@@ -139,7 +167,10 @@ export default function contact({ refProp }) {
           See my Work
         </Typography>
       </Button>
-      <Paper variant="elevation" elevation={3} sx={{ backgroundColor: "gray", color: "whitesmoke", marginTop: "20px" }}>
+
+
+
+      <Paper variant="elevation" elevation={3} sx={{ backgroundColor: "#484848", color: "whitesmoke", marginTop: "20px" }}>
         <Grid
           container
           direction="column"
@@ -147,10 +178,12 @@ export default function contact({ refProp }) {
           alignItems="center"
           sx={{ marginLeft: "-20px" }}
         >
-          <Typography variant="h6" sx={{ marginTop: "20px", textShadow: "0 1px black" }}>About Me</Typography>
+          <Typography variant="h6" sx={{ marginTop: "20px", textShadow: "1px 2px black" }}>About Me</Typography>
           <About />
         </Grid>
       </Paper>
+
+
     </Grid>
   )
 }

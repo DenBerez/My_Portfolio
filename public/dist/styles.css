@@ -4,12 +4,34 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  border: none;
+  color: none;
+}
+
+#resLink:link {
+  text-decoration: none;
+  color: rgb(10, 20, 30);
+}
+
+#resLink:visited {
+  text-decoration: none;
+}
+
+#resLink:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+  text-decoration: none;
+}
+
 #topSec {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #projSec {
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 20px;
 }
 
 #fab {
@@ -20,6 +42,26 @@ html {
 }
 
 #git:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#gitKA:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#gitCG:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#gitAA:hover {
+  background-color: orange;
+  color: rgb(10, 20, 30);
+}
+
+#gitE2:hover {
   background-color: orange;
   color: rgb(10, 20, 30);
 }
@@ -47,6 +89,7 @@ html {
 #myName {
   border-bottom: 2px solid orange;
   padding-bottom: 15px;
+  text-shadow: 1px 2px black;
 }
 
 #schedText {

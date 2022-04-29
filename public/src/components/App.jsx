@@ -3,6 +3,7 @@ import Contact from './contact';
 import { Grid, Typography, Fab } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Techs from './techs';
+import Projects from './projects';
 
 export default function App() {
   const myRef = React.useRef(null);
@@ -22,7 +23,7 @@ export default function App() {
         {/* <Techs /> */}
       </section>
       <section id='projSec' ref={myRef}>
-        <Typography variant="h5">My Projects</Typography>
+        <Projects />
       </section>
       <Fab id='fab' aria-label="up" onClick={scrollToTop}>
         <ArrowUpwardIcon fontSize="large" />
